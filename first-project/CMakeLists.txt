@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
-
 project(RentalBook CXX)
 
-include(books/books.cmake)
+add_executable(RentalBook main.cpp)
 
-add_executable(RentalBook main.cpp ${books_sources})
+add_subdirectory(books)
+target_link_libraries(RentalBook PRIVATE books)
