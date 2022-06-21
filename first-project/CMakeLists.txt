@@ -1,3 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
-project(RentalCar)
-add_executable(RentalCar main.cpp)
+
+project(RentalBook CXX)
+
+include(books/books.cmake)
+
+add_executable(RentalBook main.cpp ${books_sources})
